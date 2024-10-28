@@ -24,5 +24,11 @@
         <halo:footer />
       </ul>
     </section>
+    <ul th:with="stats = ${siteStatsFinder.getStats()}">
+      <li th:text="'浏览量：'+${stats.visit}"></li>
+      <li th:text=" '文章数：'+${stats.post}"></li>
+      <li th:text=" '运行天数：'+${stats.upvote}"></li>
+      <li th:text=" '评论数：'+${stats.comment}"></li>
+    </ul>
   </div>
 </html>
