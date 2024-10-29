@@ -41,11 +41,11 @@ spec:
           label: 社交链接
           value:
             - icon: fab fa-github
-              url: https://github.com/airbozh
-            - icon: fab fa-twitter
-              url: https://twitter.com/
+              url: https://github.com/kissthisrain
+            - icon: fab fa-bilibili
+              url: https://www.bilibili.com/
             - icon: fas fa-envelope
-              url: mailto:i@airbozh.cn
+              url: mailto:kissthisrain@163.com
             - icon: fas fa-rss
               url: /feed.xml
           max: 5
@@ -94,3 +94,26 @@ spec:
               label: 链接
               value: ""
               required: true
+    - group: record
+      label: 备案信息
+      formSchema:
+        - $formkit: radio
+          name: enable_record_info
+          label: 备案信息开关
+          value: false
+          help: 页脚处是否需要展示备案信息(下方定义的备案号)
+          options:
+            - label: 开启
+              value: true
+            - label: 关闭
+              value: false
+        - $formkit: text
+          name: icp_number
+          label: ICP备案号
+          placeholder: ICP备案号
+          value: "苏ICP备XXXXXXXX号"
+        - $formkit: text
+          name: wang_an_number
+          label: 网安备案号
+          placeholder: 请输入网安备案号
+          value: "苏公网安备XXXXXXXX号"

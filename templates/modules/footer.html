@@ -28,5 +28,8 @@
         >Chirpy</a
       >
     </p>
+    <p th:if="${theme.config.record.enable_record_info}" class="access-links">
+      <a th:if="${!#strings.isEmpty(theme.config.record.icp_number)}" th:text="${theme.config.record.icp_number}" target="_blank" href="https://beian.miit.gov.cn/" ></a>
+    </p>
   </footer>
 </html>

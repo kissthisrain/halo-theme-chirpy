@@ -25,6 +25,13 @@
           </div>
         </a>
       </div>
+      <div th:if="${haloCommentEnabled}">
+        <halo:comment
+          group="plugin.halo.run"
+          kind="Plugin"
+          th:attr="name=${pluginName}"
+        />
+      </div>
     </div>
   </div>
 </th:block>
